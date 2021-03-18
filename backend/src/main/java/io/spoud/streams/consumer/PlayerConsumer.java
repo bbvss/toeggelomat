@@ -1,6 +1,5 @@
 package io.spoud.streams.consumer;
 
-import io.smallrye.reactive.messaging.annotations.Blocking;
 import io.smallrye.reactive.messaging.kafka.KafkaRecord;
 import io.spoud.data.PlayerBO;
 import io.spoud.repositories.PlayerRepository;
@@ -28,7 +27,7 @@ public class PlayerConsumer {
     record.getPayload().setUuid(UUID.fromString(record.getKey()));
     log.info("Player update received {}", record.getPayload());
     playerRepository.save(record.getPayload());
-//    eventService.scoreChangedEvent();
+    eventService.scoreChangedEvent();
     return CompletableFuture.completedFuture(record);
   }
 }
