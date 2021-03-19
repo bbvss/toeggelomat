@@ -1,5 +1,11 @@
 # Toeggelomat
 
+- Start docker-compose
+- npm serve frontend
+- ./mvnw package backend
+- ./mvnw quarkus:dev
+- ./populate-users.sh
+
 ## Purpose
 
 The Toeggelomat has been created to improve breaks and increase the fun of playing foosball / töggele / kicker. It stores some players and can automatically match them together based on a selection. The matches are randomized and the winners will receive points.
